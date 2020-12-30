@@ -24,7 +24,7 @@ namespace ApiMiTesisUG.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("obtener")]
+        [Route("obtenerid/{id}")]
         public ActionResult<Profesor> Obtener(int id)
         {
             return Ok();
@@ -33,7 +33,7 @@ namespace ApiMiTesisUG.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("obtener/{idcarrera}")]
+        [Route("obtenercarrera/{idcarrera}")]
         public ActionResult<Profesor> ObtenerCarrera(int idcarrera)
         {
             return Ok();
@@ -42,8 +42,8 @@ namespace ApiMiTesisUG.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("obtener/{idestado}")]
-        public ActionResult<Profesor> ObtenerEstadoTesis(int idestado)
+        [Route("obtenertdisponibilidad/{idestado}")]
+        public ActionResult<Profesor> ObtenerEstadoDisponibilidad(int idestado)
         {
             return Ok();
         }

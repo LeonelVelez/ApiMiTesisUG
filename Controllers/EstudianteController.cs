@@ -11,12 +11,12 @@ namespace ApiMiTesisUG.Controllers
     [ApiController]
     [Produces("application/json")]
     [Route("[controller]")]
-    public class ProfesorController : ControllerBase
+    public class EstudianteController : ControllerBase
     {        
 
-        private readonly ILogger<ProfesorController> _logger;
+        private readonly ILogger<EstudianteController> _logger;
 
-        public ProfesorController(ILogger<ProfesorController> logger)
+        public EstudianteController(ILogger<EstudianteController> logger)
         {
             _logger = logger;
         }
@@ -29,16 +29,6 @@ namespace ApiMiTesisUG.Controllers
         {
             return Ok();
         }
-
-        [HttpGet]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
-        [Route("obtener/{idcarrera}/{idestado}")]
-        public ActionResult<Profesor> Obtener(int idcarrera, int idestado)
-        {
-            return Ok();
-        }
-
         
     }
 }

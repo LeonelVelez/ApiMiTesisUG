@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace ApiMiTesisUG
 {
@@ -26,6 +27,21 @@ namespace ApiMiTesisUG
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Api Mi Tesis UG",
+                    Description = "Es un servicio web de arquitectura rest full monolitica open source, que funciona como backend de un aplicativo movil universitario. Utilizando tecnología .net",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Jefferson Leonel Velez",
+                        Email = "jefferson.velezl@ug.edu.ec",
+                        Url = new Uri("https://github.com/LeonelVelez"),
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +57,13 @@ namespace ApiMiTesisUG
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1 API Mi Tesis UG");
+            });
 
             app.UseEndpoints(endpoints =>
             {

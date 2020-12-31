@@ -33,20 +33,12 @@ namespace ApiMiTesisUG.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("obtenercarrera/{idcarrera}")]
-        public ActionResult<Profesor> ObtenerCarrera(int idcarrera)
+        [Route("obtener/{idcarrera}/{idestado}")]
+        public ActionResult<Profesor> ObtenerCarrera(int idcarrera, int idestado)
         {
             return Ok();
         }
 
-        [HttpGet]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
-        [Route("obtenertdisponibilidad/{idestado}")]
-        public ActionResult<Profesor> ObtenerEstadoDisponibilidad(int idestado)
-        {
-            return Ok();
-        }
         
     }
 }

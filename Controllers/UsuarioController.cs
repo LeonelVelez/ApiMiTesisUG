@@ -40,6 +40,15 @@ namespace ApiMiTesisUG.Controllers
             return Ok();
         }
 
+        [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [Route("crear")]
+        public ActionResult<IHttpOption> Crear([FromBody] IUsuario usuario )
+        {
+            return Ok();
+        }
+
         
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApiMiTesisUG.Entities;
+using ApiMiTesisUG.Entities.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -11,12 +12,12 @@ namespace ApiMiTesisUG.Controllers
     [ApiController]
     [Produces("application/json")]
     [Route("[controller]")]
-    public class ProfesorController : ControllerBase
+    public class UsuarioController : ControllerBase
     {        
 
-        private readonly ILogger<ProfesorController> _logger;
+        private readonly ILogger<UsuarioController> _logger;
 
-        public ProfesorController(ILogger<ProfesorController> logger)
+        public UsuarioController(ILogger<UsuarioController> logger)
         {
             _logger = logger;
         }
@@ -24,8 +25,8 @@ namespace ApiMiTesisUG.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("obtenerid/{id}")]
-        public ActionResult<Profesor> ObtenerId(int id)
+        [Route("obtenerid/{usuario}")]
+        public ActionResult<IUsuario> ObtenerId(string usuario)
         {
             return Ok();
         }
@@ -33,8 +34,8 @@ namespace ApiMiTesisUG.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("obtener/{idcarrera}/{idestado}")]
-        public ActionResult<Profesor> Obtener(int idcarrera, int idestado)
+        [Route("obtener/{idcarrera}/{idrol}")]
+        public ActionResult<IUsuario> Obtener(int idcarrera, int idrol)
         {
             return Ok();
         }

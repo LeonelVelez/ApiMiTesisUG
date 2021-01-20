@@ -49,12 +49,13 @@ namespace ApiMiTesisUG.Controllers
             return Ok();
         }
 
-        [HttpGet]
+        [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [Route("crear")]
-        public ActionResult<Tesis> Crear([FromBody]int tesis)
+        public ActionResult<Tesis> Crear([FromBody]Tesis tesis)
         {
+            
             return Ok();
         }
 
@@ -64,6 +65,7 @@ namespace ApiMiTesisUG.Controllers
         [Route("actualizar")]
         public ActionResult<Tesis> Actualizar([FromBody]int tesis)
         {
+            
             return Ok();
         }
 

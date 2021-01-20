@@ -45,7 +45,7 @@ namespace ApiMiTesisUG
                 });
             });
         
-            services.AddDbContext<MyBdContext>(option => option.UseSqlServer(this.Configuration.GetValue<string>(this.Configuration.GetValue<string>("Connection"))));
+            services.AddDbContext<MyBdContext>(option => option.UseSqlServer(Configuration.GetValue<string>("Connection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

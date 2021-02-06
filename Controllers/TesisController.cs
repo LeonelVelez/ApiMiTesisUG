@@ -43,7 +43,7 @@ namespace ApiMiTesisUG.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("obtenerusuario/{idusuario}")]
+        [Route("usuario/{idusuario}")]
         public ActionResult<Tesis> ObtenerUsuario(int idusuario)
         {
             return Ok();
@@ -52,17 +52,17 @@ namespace ApiMiTesisUG.Controllers
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("crear")]
+        [Route("usuario")]
         public ActionResult<Tesis> Crear([FromBody]Tesis tesis)
         {
             
             return Ok();
         }
 
-        [HttpGet]
+        [HttpPut]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Route("actualizar")]
+        [Route("usuario")]
         public ActionResult<Tesis> Actualizar([FromBody]int tesis)
         {
             

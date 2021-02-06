@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 namespace ApiMiTesisUG.Entities
 {
     [Table("Usuarios")]
-    public class Usuarios : IUsuario
+    public class Usuarios 
     {
         [Key]
         [Column("Id")]

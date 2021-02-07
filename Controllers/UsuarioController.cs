@@ -50,7 +50,7 @@ namespace ApiMiTesisUG.Controllers
         public ActionResult<IHttpOption> Crear([FromBody] Usuarios usuario )
         {
                                     
-            return Ok(new HttpReponse());
+            return Ok(new ActionResponse());
         }
 
         

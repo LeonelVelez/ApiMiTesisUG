@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 namespace ApiMiTesisUG.Entities
 {
     [Table("Usuarios")]
-    public class Usuarios 
+    public class Usuarios : IHttpOption
     {
         [Key]
         [Column("Id")]
@@ -24,7 +24,7 @@ namespace ApiMiTesisUG.Entities
 
         [Column("Usuario")]
         [JsonProperty("usuario")]
-        public string Usuario { get; set; }
+        public string Usuario{ get; set; }
 
         [Column("Clave")]
         [JsonProperty("clave")]

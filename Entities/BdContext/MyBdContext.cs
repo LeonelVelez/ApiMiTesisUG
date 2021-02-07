@@ -9,6 +9,7 @@ namespace ApiMiTesisUG.Entities.MyBdContext
         public DbSet<Usuarios> Usuarios { get; set; }
         public MyBdContext([NotNullAttribute] DbContextOptions options) : base(options)
         {
+            
         }
         
     }

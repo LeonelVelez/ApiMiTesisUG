@@ -2,7 +2,7 @@ using ApiMiTesisUG.Entities.Interfaces;
 
 namespace ApiMiTesisUG.Entities
 {
-    public class Tesis
+    public class Tesis: IHttpOption
     {
         
         public int Id {get;set;}
